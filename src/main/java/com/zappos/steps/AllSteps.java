@@ -20,6 +20,8 @@ public class AllSteps {
 	
 	@Before
 	public void setUp() {
+		System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();

@@ -1,32 +1,92 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="39.88204">
-<testcase classname="Navigation and verify Size, Width Selection controls" name="Navigatioin and Verify if size and width selection are displayed" time="18.449849">
-<system-out><![CDATA[Given User has Navigated to Zappos home page................................passed
-When User selects "Shoes" from Shop Men's...................................passed
-And Select "Boots" from from Men's Shoes....................................passed
-Then A new page should appear with title "Boots, Men | Shipped Free at Zappos".passed
-When User select "Keen Utility" from brand menu.............................passed
-And Select "Pittsburgh Boot" boots from the list............................passed
-Then Browser should navigate to Add to cart page............................passed
-When user select Add to cart without selecting size/width...................passed
-Then Please select a Size and Please select a width appear..................passed
-]]></system-out>
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="102.699141">
+<testcase classname="Navigation and verify Size, Width Selection controls" name="Navigatioin and Verify if size and width selection are displayed" time="54.572688">
+<failure message="org.openqa.selenium.NoSuchElementException: Unable to locate element: .//*[@id='hpTopLeft']//div/h4/a[text()=&quot;Shop Men's&quot;]/../..&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'&#10;System info: host: 'LAPTOP-85ORAG89', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, appBuildId=20170125094131, version=51.0.1, platform=XP, proxy=Proxy(), command_id=1.0, specificationLevel=0.0, acceptSslCerts=false, processId=10188.0, browserVersion=51.0.1, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, javascriptEnabled=true, platformName=windows_nt}]&#10;Session ID: 41956f42-631b-4bd5-8430-6ead75ba8c67&#10;*** Element info: {Using=xpath, value=.//*[@id='hpTopLeft']//div/h4/a[text()=&quot;Shop Men's&quot;]/../..}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:361)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy15.findElement(Unknown Source)&#13;&#10;&#9;at com.zappos.pom.HomePage.selectItemFromMensSideMenu(HomePage.java:35)&#13;&#10;&#9;at com.zappos.steps.AllSteps.user_Selects_menu_from_Shop_Men(AllSteps.java:46)&#13;&#10;&#9;at ✽.When User selects &quot;Shoes&quot; from Shop Men's(ZappNavigation.feature:5)&#13;&#10;"><![CDATA[Given User has Navigated to Zappos home page................................passed
+When User selects "Shoes" from Shop Men's...................................failed
+And Select "Boots" from from Men's Shoes....................................skipped
+Then A new page should appear with title "Boots, Men | Shipped Free at Zappos".skipped
+When User select "Keen Utility" from brand menu.............................skipped
+And Select "Pittsburgh Boot" boots from the list............................skipped
+Then Browser should navigate to Add to cart page............................skipped
+When user select Add to cart without selecting size/width...................skipped
+Then Please select a Size and Please select a width appear..................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Unable to locate element: .//*[@id='hpTopLeft']//div/h4/a[text()="Shop Men's"]/../..
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-85ORAG89', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, appBuildId=20170125094131, version=51.0.1, platform=XP, proxy=Proxy(), command_id=1.0, specificationLevel=0.0, acceptSslCerts=false, processId=10188.0, browserVersion=51.0.1, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41956f42-631b-4bd5-8430-6ead75ba8c67
+*** Element info: {Using=xpath, value=.//*[@id='hpTopLeft']//div/h4/a[text()="Shop Men's"]/../..}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy15.findElement(Unknown Source)
+	at com.zappos.pom.HomePage.selectItemFromMensSideMenu(HomePage.java:35)
+	at com.zappos.steps.AllSteps.user_Selects_menu_from_Shop_Men(AllSteps.java:46)
+	at ✽.When User selects "Shoes" from Shop Men's(ZappNavigation.feature:5)
+]]></failure>
 </testcase>
-<testcase classname="Verify &quot;Dont See your Size&quot; link and complete popup Window" name="Verify &quot;Dont See your Size&quot; link and complete popup Window" time="21.432191">
-<system-out><![CDATA[Given User has Navigated to Zappos home page................................passed
-When User selects "Shoes" from Shop Men's...................................passed
-And Select "Boots" from from Men's Shoes....................................passed
-Then A new page should appear with title "Boots, Men | Shipped Free at Zappos".passed
-When User select "Keen Utility" from brand menu.............................passed
-And Select "Pittsburgh Boot" boots from the list............................passed
-Then Browser should navigate to Add to cart page............................passed
-When click on Don't see your size Link......................................passed
-Then Notify me Popup display................................................passed
-When Fill Notify me with Email "test@gmail.com".............................passed
-And Color with "Raven/Yellow"...............................................passed
-And Size with "9"...........................................................passed
-And Width with "EE - Wide"..................................................passed
-And Select Notify me........................................................passed
-Then Acknowledgement page displayed with Thank You..........................passed
-]]></system-out>
+<testcase classname="Verify &quot;Dont See your Size&quot; link and complete popup Window" name="Verify &quot;Dont See your Size&quot; link and complete popup Window" time="48.126453">
+<failure message="org.openqa.selenium.NoSuchElementException: Unable to locate element: .//*[@id='hpTopLeft']//div/h4/a[text()=&quot;Shop Men's&quot;]/../..&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'&#10;System info: host: 'LAPTOP-85ORAG89', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, appBuildId=20170125094131, version=51.0.1, platform=XP, proxy=Proxy(), command_id=1.0, specificationLevel=0.0, acceptSslCerts=false, processId=8188.0, browserVersion=51.0.1, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, javascriptEnabled=true, platformName=windows_nt}]&#10;Session ID: 8a9ffa98-2aa6-4741-a2aa-6052ccb50cff&#10;*** Element info: {Using=xpath, value=.//*[@id='hpTopLeft']//div/h4/a[text()=&quot;Shop Men's&quot;]/../..}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:361)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy15.findElement(Unknown Source)&#13;&#10;&#9;at com.zappos.pom.HomePage.selectItemFromMensSideMenu(HomePage.java:35)&#13;&#10;&#9;at com.zappos.steps.AllSteps.user_Selects_menu_from_Shop_Men(AllSteps.java:46)&#13;&#10;&#9;at ✽.When User selects &quot;Shoes&quot; from Shop Men's(ZappNotifyMe.feature:5)&#13;&#10;"><![CDATA[Given User has Navigated to Zappos home page................................passed
+When User selects "Shoes" from Shop Men's...................................failed
+And Select "Boots" from from Men's Shoes....................................skipped
+Then A new page should appear with title "Boots, Men | Shipped Free at Zappos".skipped
+When User select "Keen Utility" from brand menu.............................skipped
+And Select "Pittsburgh Boot" boots from the list............................skipped
+Then Browser should navigate to Add to cart page............................skipped
+When click on Don't see your size Link......................................skipped
+Then Notify me Popup display................................................skipped
+When Fill Notify me with Email "test@gmail.com".............................skipped
+And Color with "Raven/Yellow"...............................................skipped
+And Size with "9"...........................................................skipped
+And Width with "EE - Wide"..................................................skipped
+And Select Notify me........................................................skipped
+Then Acknowledgement page displayed with Thank You..........................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Unable to locate element: .//*[@id='hpTopLeft']//div/h4/a[text()="Shop Men's"]/../..
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-85ORAG89', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, appBuildId=20170125094131, version=51.0.1, platform=XP, proxy=Proxy(), command_id=1.0, specificationLevel=0.0, acceptSslCerts=false, processId=8188.0, browserVersion=51.0.1, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 8a9ffa98-2aa6-4741-a2aa-6052ccb50cff
+*** Element info: {Using=xpath, value=.//*[@id='hpTopLeft']//div/h4/a[text()="Shop Men's"]/../..}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy15.findElement(Unknown Source)
+	at com.zappos.pom.HomePage.selectItemFromMensSideMenu(HomePage.java:35)
+	at com.zappos.steps.AllSteps.user_Selects_menu_from_Shop_Men(AllSteps.java:46)
+	at ✽.When User selects "Shoes" from Shop Men's(ZappNotifyMe.feature:5)
+]]></failure>
 </testcase>
 </testsuite>
